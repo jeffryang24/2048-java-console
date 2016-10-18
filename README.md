@@ -7,7 +7,8 @@ A simple 2048 game based on Java language. You can run it by executing the java 
 cd /path-to-your-project/2048-java-console/2048/src
 javac Game.java
 java Game
-``` <br />
+``` 
+<br />
 ![2048_game]( https://raw.githubusercontent.com/jeffryang24/2048-java-console/master/images/2048.png "2048")
 
 * You can also just execute the jar package (Not Recommended! Maybe the jar package is out-dated) by typing this command <br />
