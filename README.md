@@ -19,7 +19,7 @@ java -jar 2048-java.jar
 ![2048_bash]( https://github.com/jeffryang24/2048-java-console/raw/master/images/2048-2.png "2048-bash") 
 
 ###Group
-This project is dedicated for our Advanced OOP course. Our team member:
+This project is dedicated for our Advanced OOP course. Our team member: <br />
 1. Jeffry Angtoni (1801425975) aka. jeffryang24
 2. Benny Susanto
 3. Satrio Wibisono
