@@ -5,9 +5,11 @@ A simple 2048 game based on Java language. You can run it by executing the java 
 * Execute `java Game.class` on terminal, then you should see below picture on your screen.
 ![2048_game]( https://raw.githubusercontent.com/jeffryang24/2048-java-console/master/images/2048.png "2048")
 
-* You can also just execute the jar package by typing this command
-`cd /path-to-the-project/2048-java-console/binary` <br/>
-`java -jar 2048-java.jar`
+* You can also just execute the jar package by typing this command <br />
+```
+cd /path-to-the-project/2048-java-console/binary
+java -jar 2048-java.jar
+```
 ![2048_bash]( https://github.com/jeffryang24/2048-java-console/raw/master/images/2048-2.png "2048-bash") 
 
 ###Group
