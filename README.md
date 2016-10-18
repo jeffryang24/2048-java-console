@@ -2,10 +2,15 @@
 A simple 2048 game based on Java language. You can run it by executing the java binary from bin folder.
 
 ###Example 
-* Execute `java Game.class` on terminal, then you should see below picture on your screen.
+* Compile from source and run it using below command. <br />
+```
+cd /path-to-your-project/2048-java-console/2048/src
+javac Game.java
+java Game
+``` <br />
 ![2048_game]( https://raw.githubusercontent.com/jeffryang24/2048-java-console/master/images/2048.png "2048")
 
-* You can also just execute the jar package by typing this command <br />
+* You can also just execute the jar package (Not Recommended! Maybe the jar package is out-dated) by typing this command <br />
 ```
 cd /path-to-the-project/2048-java-console/binary
 java -jar 2048-java.jar
