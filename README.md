@@ -11,7 +11,7 @@ java Game
 <br />
 ![2048_game]( https://raw.githubusercontent.com/jeffryang24/2048-java-console/master/images/2048.png "2048")
 
-* You can also just execute the jar package (Not Recommended! Maybe the jar package is out-dated) by typing this command <br />
+* You can also just execute the jar package (__Not Recommended! Maybe the jar package is out-dated__) by typing this command <br />
 ```
 cd /path-to-the-project/2048-java-console/binary
 java -jar 2048-java.jar
