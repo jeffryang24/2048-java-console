@@ -23,6 +23,6 @@ This project is dedicated for our Advanced OOP course. Our team member: <br />
 1. Jeffry Angtoni (1801425975)
 2. Benny Susanto
 3. Satrio Wibisono
-4. M. Syidad
+4. M Syidad
 
 
