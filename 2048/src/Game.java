@@ -4,7 +4,7 @@ import dua0empat8.Score;
 import dua0empat8.helper.*;
 
 /*
- * @author					: Jfree
+ * @author					: Jeffry Angtoni (jeffryang24)
  * @description				: Simple 2048 game
  * @date					: October 3, 2016
  */
