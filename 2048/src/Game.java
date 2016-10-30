@@ -424,7 +424,15 @@ public class Game {
 	}
 	
 	public static void printScore(){
-		String sScore = String.format("Score: %-10dHighest Score: %-10d \n\n", score.getScore(), score.getHighScore());
+		// Add notification when user reachs 2048
+		// @added by : Jeffry Angtoni
+		// @date	 : October 30, 2016
+		String sScore = "";
+		if (score.getScore() == 2048){
+			sScore = String.format("Congratulations!!\n=======================\nYou just got 2048!!!\nScore: %-10dHighest Score: %-10d \n\n", score.getScore(), score.getHighScore());
+		}else{
+			sScore = String.format("Score: %-10dHighest Score: %-10d \n\n", score.getScore(), score.getHighScore());
+		}
 		Utility.print(sScore);
 	}
 	
