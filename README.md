@@ -18,6 +18,8 @@ java -jar 2048-java.jar
 ```
 ![2048_bash]( https://github.com/jeffryang24/2048-java-console/raw/master/images/2048-2.png "2048-bash") 
 
+* **[Updated October 30<sup>th</sup>, 2016]** You can execute the Windows executable (__Not Recommended! Maybe the jar package is out-dated__): `2048-java.exe`
+
 ###Group
 This project is dedicated for our Advanced OOP course. Our team member: <br />
  1. Jeffry Angtoni (1801425975)
