@@ -6,7 +6,7 @@
   <name>2048</name>
   <description>2048 - Maven</description>
   <build>
-    <sourceDirectory>src</sourceDirectory>
+    <sourceDirectory>2048/src</sourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
