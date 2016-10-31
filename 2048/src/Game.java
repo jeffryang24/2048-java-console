@@ -13,6 +13,7 @@ public class Game {
 	// Define Global Variable
 	static RNG random = new RNG();
 	static Score score = new Score();
+	final static int iCheckPoint = 2048;
 	static int[][] arrDimension;
 	//static int[][] arrDimension = {{0,4,2,2},{2,2,2,0},{2,2,2,4},{4,2,2,0}};
 	//static int[][] arrDimension = {{0,0,2,0},{2,0,2,0},{4,0,0,0},{2,2,2,0}};
@@ -34,6 +35,8 @@ public class Game {
 		do{
 			sInput = "";
 			score.setScore(0);	// reset score
+			score.setIs2048(false);
+			Score.i2048Counter = 0;
 			isGameOver = false;
 			
 			Utility.clearScreen();
@@ -150,6 +153,7 @@ public class Game {
 						if (!bOnlyCheck){
 							arrDimension[j][i] += arrDimension[j+1][i];
 							arrDimension[j+1][i] = 0;
+							check2048(arrDimension[j][i]);
 							if (score.getScore() >= score.getHighScore()){
 								int tmp = score.getScore();
 								score.setScore(score.getScore() + arrDimension[j][i]);
@@ -202,6 +206,7 @@ public class Game {
 						if (!bOnlyCheck){
 							arrDimension[j-1][i] += arrDimension[j][i];
 							arrDimension[j][i] = 0;
+							check2048(arrDimension[j-1][i]);
 							if (score.getScore() >= score.getHighScore()){
 								int tmp = score.getScore();
 								score.setScore(score.getScore() + arrDimension[j-1][i]);
@@ -255,6 +260,7 @@ public class Game {
 						if (!bOnlyCheck){
 							arrDimension[i][j] += arrDimension[i][j+1];
 							arrDimension[i][j+1] = 0;
+							check2048(arrDimension[i][j]);
 							if (score.getScore() >= score.getHighScore()){
 								int tmp = score.getScore();
 								score.setScore(score.getScore() + arrDimension[i][j]);
@@ -307,6 +313,7 @@ public class Game {
 						if (!bOnlyCheck){
 							arrDimension[i][j] += arrDimension[i][j-1];
 							arrDimension[i][j-1] = 0;
+							check2048(arrDimension[i][j]);
 							if (score.getScore() >= score.getHighScore()){
 								int tmp = score.getScore();
 								score.setScore(score.getScore() + arrDimension[i][j]);
@@ -385,6 +392,9 @@ public class Game {
 		int iLargestNumber = checkLargestNumber(iDimension, arrTile);
 		int iLargestLength = Integer.toString(iLargestNumber).length();
 		
+		// bypass iLargestLength for fixing stuttering
+		if (iLargestLength < 3) iLargestLength = 3;
+		
 		// print box
 		for(int i=1;i<=(3+iLargestLength)*iDimension;i++){
 			if (i==1){
@@ -428,8 +438,9 @@ public class Game {
 		// @added by : Jeffry Angtoni
 		// @date	 : October 30, 2016
 		String sScore = "";
-		if (score.getScore() == 2048){
-			sScore = String.format("Congratulations!!\n=======================\nYou just got 2048!!!\nScore: %-10dHighest Score: %-10d \n\n", score.getScore(), score.getHighScore());
+		if (score.Is2048() && Score.i2048Counter <= 1){
+			sScore = String.format("Congratulations!!\n=======================\nYou just got %d!!!\nScore: %-10dHighest Score: %-10d \n\n", iCheckPoint, score.getScore(), score.getHighScore());
+			score.setIs2048(false);
 		}else{
 			sScore = String.format("Score: %-10dHighest Score: %-10d \n\n", score.getScore(), score.getHighScore());
 		}
@@ -446,5 +457,22 @@ public class Game {
 			}
 		}
 		return tmp;
+	}
+	
+	/**
+	 * @author Jeffry Angtoni
+	 * @date October 31st, 2016
+	 * @description Check if current slide is 2048 or not?
+	 * @param iDimensionPoint
+	 * @param iCheckPoint
+	 */
+	public static void check2048(int iDimensionPoint){
+		if (iDimensionPoint == iCheckPoint){
+			score.setIs2048(true);
+			Score.i2048Counter++;
+			score.setLastDimensionPoint(iDimensionPoint);
+		}else{
+			score.setLastDimensionPoint(iDimensionPoint);
+		}
 	}
 }
