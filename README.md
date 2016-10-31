@@ -1,4 +1,4 @@
-#2048 Java Console
+#2048 Java Console [![Build Status](https://travis-ci.org/jeffryang24/2048-java-console.svg?branch=master)](https://travis-ci.org/jeffryang24/2048-java-console)
 A simple 2048 game based on Java language. You can run it by executing the java binary from bin folder.
 
 ###Example 
