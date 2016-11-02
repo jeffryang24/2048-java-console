@@ -13,11 +13,10 @@ public class Game {
 	// Define Global Variable
 	static RNG random = new RNG();
 	static Score score = new Score();
+	// Set notification Check Point. Default to 2048
 	final static int iCheckPoint = 2048;
 	static int[][] arrDimension;
-	//static int[][] arrDimension = {{0,4,2,2},{2,2,2,0},{2,2,2,4},{4,2,2,0}};
-	//static int[][] arrDimension = {{0,0,2,0},{2,0,2,0},{4,0,0,0},{2,2,2,0}};
-	// Board Dimension
+	// Board Dimension. Default: 4
 	static int iDimension = 4;
 	static int[] arrNumberPool = {2,2,2,2,2,2,2,2,2,4};
 	static boolean isGameOver = false;
@@ -94,15 +93,12 @@ public class Game {
 				
 				if (sInput.equalsIgnoreCase("w")){
 					if (SlideValue(iDimension, arrDimension, 1, false)) randSetValue(iDimension, arrDimension, false);
-					//SlideValue(iDimension, arrDimension, 1);
 				}else if (sInput.equalsIgnoreCase("s")){
 					if (SlideValue(iDimension, arrDimension, 2, false)) randSetValue(iDimension, arrDimension, false); 
 				}else if (sInput.equalsIgnoreCase("a")){
 					if (SlideValue(iDimension, arrDimension, 3, false)) randSetValue(iDimension, arrDimension, false);
-					//SlideValue(iDimension, arrDimension, 3);
 				}else if (sInput.equalsIgnoreCase("d")){
 					if (SlideValue(iDimension, arrDimension, 4, false)) randSetValue(iDimension, arrDimension, false);
-					//SlideValue(iDimension, arrDimension, 4);
 				}else{
 					System.out.print("Your input is not defined! Consider w,s,a, or d!");
 					System.out.print("Press any key to continue...");
@@ -181,7 +177,7 @@ public class Game {
 			}
 			
 			if (iStep == 0){
-				//System.out.println("No Move!");
+				// No move anymore
 				return false;
 			}
 		}else if (iSlidePosition == 2){
@@ -235,7 +231,7 @@ public class Game {
 			}
 			
 			if (iStep == 0){
-				//System.out.println("No Move!");
+				// No move anymore
 				return false;
 			}
 		}else if (iSlidePosition == 3){
@@ -341,7 +337,7 @@ public class Game {
 			}
 			
 			if (iStep == 0){
-				//System.out.println("No Move!");
+				// No move anymore
 				return false;
 			}
 		}

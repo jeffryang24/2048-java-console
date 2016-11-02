@@ -8,7 +8,6 @@ public class Score {
 	public static int i2048Counter = 0;
 	
 	public Score(){
-		//set first anonymous player for first time play
 		this.__PLAYER_SCORE = this.__PLAYER_HIGHEST_SCORE = this.__GAME_LAST_DIMENSION_POINT = 0;
 		this.__IS2048 = false;
 	}
