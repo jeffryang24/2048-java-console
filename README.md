@@ -9,6 +9,7 @@ javac Game.java
 java Game
 ``` 
 <br />
+
 ![2048_game][2048_img]
 
 * You can also just execute the jar package (__Not Recommended! Maybe the jar package is out-dated__) by typing this command <br />
