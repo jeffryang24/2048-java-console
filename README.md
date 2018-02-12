@@ -1,4 +1,4 @@
-#2048 Java Console [![Build Status][travis_img_link]](https://travis-ci.org/jeffryang24/2048-java-console) [![Join the chat at https://gitter.im/2048-java-console/Lobby](https://badges.gitter.im/2048-java-console/Lobby.svg)][gitter_link]
+# 2048 Java Console [![Build Status][travis_img_link]](https://travis-ci.org/jeffryang24/2048-java-console) [![Join the chat at https://gitter.im/2048-java-console/Lobby](https://badges.gitter.im/2048-java-console/Lobby.svg)][gitter_link]  
 A simple 2048 game based on Java language. You can run it by executing the java binary from bin folder.
 
 ### Example 
